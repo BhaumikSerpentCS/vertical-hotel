@@ -25,15 +25,15 @@
         <field name="name">All FoodItems</field>
     </record>
     <record id="hotel_menucard_type_1" model="hotel.menucard.type">
-        <field name="menu_id" search="[('name', '=', 'All FoodItems')]" />
+        <field name="menu_id" ref="hotel_menucard_type_0" />
         <field name="name">Punjabi</field>
     </record>
     <record id="hotel_menucard_type_2" model="hotel.menucard.type">
-        <field name="menu_id" search="[('name', '=', 'All FoodItems')]" />
+        <field name="menu_id" ref="hotel_menucard_type_0" />
         <field name="name">South Indian</field>
     </record>
     <record id="hotel_menucard_type_3" model="hotel.menucard.type">
-        <field name="menu_id" search="[('name', '=', 'All FoodItems')]" />
+        <field name="menu_id" ref="hotel_menucard_type_0" />
         <field name="name">Gujarati</field>
     </record>
 
@@ -105,27 +105,27 @@
     <!-- Gujarati -->
     <record id="hotel_fooditem_21" model="hotel.menucard">
         <field name="name">Chole-Bhature</field>
-        <field name="categ_id" hotel_menucard_type_3 />
+        <field name="categ_id" ref="hotel_menucard_type_3" />
         <field name="list_price">60.00</field>
         <field name="image" type="base64" file="hotel_restaurant/static/img/chole.png" />
     </record>
     <record id="hotel_fooditem_12" model="hotel.menucard">
         <field name="name">Bahji Pav</field>
-        <field name="categ_id" hotel_menucard_type_3 />
+        <field name="categ_id" ref="hotel_menucard_type_3" />
         <field name="list_price">60</field>
         <field name="image" type="base64"
             file="hotel_restaurant/static/img/bhaji_paw.jpg" />
     </record>
     <record id="hotel_fooditem_13" model="hotel.menucard">
         <field name="name">Khandvi</field>
-        <field name="categ_id" hotel_menucard_type_3 />
+        <field name="categ_id" ref="hotel_menucard_type_3" />
         <field name="list_price">40</field>
         <field name="image" type="base64"
             file="hotel_restaurant/static/img/khandvi.jpg" />
     </record>
     <record id="hotel_fooditem_14" model="hotel.menucard">
         <field name="name">Halva</field>
-        <field name="categ_id" hotel_menucard_type_3 />
+        <field name="categ_id" ref="hotel_menucard_type_3" />
         <field name="list_price">80</field>
         <field name="image" type="base64" file="hotel_restaurant/static/img/Halva.jpg" />
     </record>
@@ -133,47 +133,47 @@
     <!-- South Indian -->
     <record id="hotel_fooditem_2" model="hotel.menucard">
         <field name="name">Dosa</field>
-        <field name="categ_id" hotel_menucard_type_2 />
+        <field name="categ_id" ref="hotel_menucard_type_2" />
         <field name="list_price">30.00</field>
         <field name="image" type="base64" file="hotel_restaurant/static/img/dosa.png" />
     </record>
     <record id="hotel_fooditem_15" model="hotel.menucard">
         <field name="name">Idli-Sambar</field>
-        <field name="categ_id" hotel_menucard_type_2 />
+        <field name="categ_id" ref="hotel_menucard_type_2" />
         <field name="list_price">40.00</field>
         <field name="image" type="base64"
             file="hotel_restaurant/static/img/Idli_sambar.jpg" />
     </record>
     <record id="hotel_fooditem_16" model="hotel.menucard">
         <field name="name">Upma</field>
-        <field name="categ_id" hotel_menucard_type_2 />
+        <field name="categ_id" ref="hotel_menucard_type_2" />
         <field name="list_price">30.00</field>
         <field name="image" type="base64" file="hotel_restaurant/static/img/upma.jpg" />
     </record>
     <record id="hotel_fooditem_17" model="hotel.menucard">
         <field name="name">Vada-Sambar</field>
-        <field name="categ_id" hotel_menucard_type_2 />
+        <field name="categ_id" ref="hotel_menucard_type_2" />
         <field name="list_price">50.00</field>
         <field name="image" type="base64"
             file="hotel_restaurant/static/img/vada_sambhar.jpg" />
     </record>
     <record id="hotel_fooditem_18" model="hotel.menucard">
         <field name="name">Uttapam</field>
-        <field name="categ_id" hotel_menucard_type_2 />
+        <field name="categ_id" ref="hotel_menucard_type_2" />
         <field name="list_price">70.00</field>
         <field name="image" type="base64"
             file="hotel_restaurant/static/img/uttapam.jpg" />
     </record>
     <record id="hotel_fooditem_19" model="hotel.menucard">
         <field name="name">Appam </field>
-        <field name="categ_id" hotel_menucard_type_2 />
+        <field name="categ_id" ref="hotel_menucard_type_2" />
         <field name="list_price">60.00</field>
         <field name="image" type="base64"
             file="hotel_restaurant/static/img/appam1.jpg" />
     </record>
     <record id="hotel_fooditem_20" model="hotel.menucard">
         <field name="name">Pongal</field>
-        <field name="categ_id" hotel_menucard_type_2 />
+        <field name="categ_id" ref="hotel_menucard_type_2" />
         <field name="list_price">50.00</field>
         <field name="image" type="base64"
             file="hotel_restaurant/static/img/pongal.jpg" />
