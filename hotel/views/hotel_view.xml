@@ -397,6 +397,8 @@
                 <field name="status" />
                 <field name="color" />
                 <field name="lst_price" />
+                <field name="id" />
+                <field name="code" />
                 <templates>
                     <t t-name="kanban-box">
                         <div
