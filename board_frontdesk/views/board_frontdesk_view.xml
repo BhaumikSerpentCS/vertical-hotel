@@ -3,7 +3,7 @@
 <odoo>
     <!-- Action of hotel reservation -->
     <record id="action_view_frontdesk_cal" model="ir.actions.act_window">
-        <field name="name">FrontDesk</field>
+        <field name="name">Hotel Reservation</field>
         <field name="res_model">hotel.reservation</field>
         <field name="view_type">form</field>
         <field name="view_mode">calendar,form</field>
@@ -19,7 +19,7 @@
     </record>
     <!-- Action for room reservation summary -->
     <record id="action_hotel_reservation_summary" model="ir.actions.act_window">
-        <field name="name">action.desk.hotel.reservation.summary</field>
+        <field name="name">Room Reservation Summary</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">room.reservation.summary</field>
         <field name="view_type">form</field>
@@ -57,10 +57,10 @@
     </record>
     <!-- Form view of hotel front desk -->
     <record id="hotel_frontdesk_kanban" model="ir.ui.view">
-        <field name="name">hotel.frontdesk.form</field>
+        <field name="name">Hotel Frontdesk</field>
         <field name="model">hotel.test.reserv</field>
         <field name="arch" type="xml">
-            <kanban class="oe_background_grey o_kanban_dashboard o_emphasize_colors">
+            <kanban class="oe_background_grey o_kanban_dashboard o_emphasize_colors" create="0">
                 <templates>
                     <t t-name="kanban-box">
                         <div class="o_kanban_card_header_title">
@@ -105,7 +105,7 @@
     </record>
     <!-- Action of hotel front desk -->
     <record id="open_hotel_frontdesk" model="ir.actions.act_window">
-        <field name="name">FrontDesk Dashboard</field>
+        <field name="name">Hotel Frontdesk</field>
         <field name="res_model">hotel.test.reserv</field>
         <field name="view_mode">kanban</field>
         <field name="view_id" ref="hotel_frontdesk_kanban" />

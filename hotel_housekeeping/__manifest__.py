@@ -3,13 +3,13 @@
 {
     'name': 'Hotel Housekeeping Management',
     'version': '11.0.1.0.0',
-    'author': 'Odoo Community Association (OCA), Serpent Consulting\
-                Services Pvt. Ltd., Odoo S.A.',
+    'author': 'Odoo Community Association (OCA), Serpent Consulting \
+               Services Pvt. Ltd., Odoo S.A.',
     'website': 'http://www.serpentcs.com',
     'license': 'AGPL-3',
     'category': 'Generic Modules/Hotel Housekeeping',
     'depends': ['hotel'],
-    'demo': ['views/hotel_housekeeping_data.xml', ],
+    'demo': ['views/hotel_housekeeping_data.xml'],
     'data': [
         'security/ir.model.access.csv',
         'report/hotel_housekeeping_report.xml',

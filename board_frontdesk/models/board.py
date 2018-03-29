@@ -17,13 +17,15 @@ class HotelFrontdesk(models.Model):
         return self._get_action('board_frontdesk.action_view_frontdesk_cal')
 
     def get_action_hotel_reservation_summary(self):
-        return self._get_action('board_frontdesk.action_hotel_reservation_summary')
+        return self.\
+            _get_action('board_frontdesk.action_hotel_reservation_summary')
 
     def get_action_hotel_room_board(self):
         return self._get_action('board_frontdesk.action_hotel_room_board')
 
     def get_action_hotel_restaurant_order(self):
-        return self. _get_action('board_frontdesk.action_hotel_restaurant_order')
+        return self.\
+            _get_action('board_frontdesk.action_hotel_restaurant_order')
 
     def get_action_table_order_board(self):
         return self._get_action('board_frontdesk.action_table_order_board')

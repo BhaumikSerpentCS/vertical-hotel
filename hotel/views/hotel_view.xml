@@ -605,7 +605,7 @@
                                             <separator string="Automatic Declaration" col="4"
                                                 colspan="4" />
                                             <group col="4" colspan="4">
-                                                <field name="product_id" domain="[('isservice','=',True)]"
+                                                <field name="product_id" options="{'no_create':1,'no_open':1}" domain="[('isservice','=',True)]"
                                                     context="{'partner_id':parent.partner_id,'quantity':product_uom_qty,'pricelist':parent.pricelist_id,'hotel':parent.warehouse_id,'uom':product_uom}" />
                                                 <field name="product_uom" />
                                                 <field name="product_uom_qty"
@@ -651,9 +651,6 @@
                                 </div>
                                 <field name="amount_total" nolabel="1" sum="Total amount"
                                     widget='monetary' />
-                                <button name="button_dummy" string="Compute" states="draft"
-                                    type="object" class="fa fa-calculator" aria-hidden="true"
-                                    style="background-color:#7c7bad;" />
                             </group>
                             <div class="oe_clear" />
                         </page>

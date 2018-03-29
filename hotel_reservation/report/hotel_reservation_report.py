@@ -4,7 +4,6 @@
 import time
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
-from dateutil import parser
 from odoo import models, fields, api
 
 

@@ -35,7 +35,6 @@ class HotelRestaurantReport(models.AbstractModel):
             docids = data['form'].get('docids')
         folio_profile = self.env['hotel.restaurant.tables'].browse(docids)
         date_start = data.get('date_start', fields.Date.today())
-        date_start = data.get('date_start', fields.Date.today())
         date_end = data['form'].get('date_end', str(datetime.now() +
                                     relativedelta(months=1,
                                                   day=1, days=1))[:10])

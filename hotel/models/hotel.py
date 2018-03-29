@@ -587,15 +587,6 @@ class HotelFolio(models.Model):
                 self.pricelist_id = partner_rec.property_product_pricelist.id
 
     @api.multi
-    def button_dummy(self):
-        '''
-        @param self: object pointer
-        '''
-        for folio in self:
-            folio.order_id.button_dummy()
-        return True
-
-    @api.multi
     def action_done(self):
         self.state = 'done'
 
