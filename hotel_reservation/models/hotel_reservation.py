@@ -118,8 +118,10 @@ class HotelReservation(models.Model):
 
     reservation_no = fields.Char('Reservation No', size=64, readonly=True)
     date_order = fields.Datetime('Date Ordered', readonly=True, required=True,
-                                 index=True,
-                                 default=(lambda *a: time.strftime(dt)))
+                                index=True,
+                                store=True,
+                                default=(lambda *a: time.strftime(dt))
+                                )
     warehouse_id = fields.Many2one('stock.warehouse', 'Hotel', readonly=True,
                                    index=True,
                                    required=True, default=1,
@@ -207,6 +209,16 @@ class HotelReservation(models.Model):
         ctx.update({'duplicate': True})
         return super(HotelReservation, self.with_context(ctx)).copy()
 
+    @api.multi
+    def folio_view(self):
+        '''
+        @param self: object pointer
+        '''
+        folio_view = self.env.ref(
+            'hotel.open_hotel_folio1_form_tree_all').read()[0]
+        folio_view['domain'] = [('reservation_id', '=', self.reservation_no)]
+        return folio_view
+
     @api.constrains('reservation_line', 'adults', 'children')
     def check_reservation_rooms(self):
         '''
@@ -239,7 +251,6 @@ class HotelReservation(models.Model):
         Checkout date should be greater than the check-in date.
         """
         if self.checkout and self.checkin:
-            if self.checkin < self.date_order:
                 raise ValidationError(_('Check-in date should be greater than \
                                          the current date.'))
             if self.checkout < self.checkin:

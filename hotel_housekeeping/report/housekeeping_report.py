@@ -49,8 +49,8 @@ class ActivityReport(models.AbstractModel):
         activity_doc = self.env['hotel.housekeeping.activities'].browse(docids)
         date_start = data['form'].get('date_start', fields.Date.today())
         date_end = data['form'].get('date_end', str(datetime.now() +
-                                    relativedelta(months=+1,
-                                                  day=1, days=-1))[:10])
+                                                    relativedelta(months=+1,
+                                                                  day=1, days=-1))[:10])
         room_no = data['form'].get('room_no')[0]
         return {
             'doc_ids': docids,

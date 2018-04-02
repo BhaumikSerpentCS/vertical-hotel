@@ -23,10 +23,13 @@
                     <field name="state" widget="statusbar" />
                 </header>
                 <sheet>
-                    <div class="oe_right oe_button_box">
-                        <button name="%(hotel.open_hotel_folio1_form_tree_all)d"
-                            type="action" icon="fa-file-text-o" class="oe_stat_button">
-                            <field name="no_of_folio" widget="statinfo" />
+                     <div class="oe_button_box" name="button_box">
+                        <button name="folio_view" type="object" icon="fa-file-text-o" class="oe_stat_button">
+                            <div class="o_form_field o_stat_info">
+                                <span class="o_stat_value">
+                        <field name="no_of_folio" widget="statinfo" />
+                                </span>
+                            </div>
                         </button>
                     </div>
                     <label string="Reservation No" />

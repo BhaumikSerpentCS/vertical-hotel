@@ -9,7 +9,7 @@
     'category': 'Board/Hotel FrontDesk',
     'depends': [
         'report_hotel_restaurant',
-        ],
+    ],
     'license': 'AGPL-3',
     'data': [
         'views/board_frontdesk_view.xml',

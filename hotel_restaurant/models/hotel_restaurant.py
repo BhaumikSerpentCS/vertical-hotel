@@ -470,7 +470,7 @@ class HotelRestaurantOrder(models.Model):
                 'room_no': order.room_no.name,
                 'w_name': order.waiter_name.name,
                 'tableno': [(6, 0, table_ids)],
-                }
+            }
             kot_obj = order_tickets_obj.browse(self.kitchen_id)
             kot_obj.write(line_data)
             for order_line in order.order_list:
@@ -558,7 +558,7 @@ class HotelReservationOrder(models.Model):
                 'kot_date': order.date1,
                 'w_name': order.waitername.name,
                 'tableno': [(6, 0, table_ids)],
-                }
+            }
             kot_data = order_tickets_obj.create(line_data)
             self.kitchen_id = kot_data.id
             for order_line in order.order_list:
@@ -592,7 +592,7 @@ class HotelReservationOrder(models.Model):
                 'kot_date': time.strftime(DEFAULT_SERVER_DATETIME_FORMAT),
                 'w_name': order.waitername.name,
                 'tableno': [(6, 0, table_ids)],
-                }
+            }
             kot_obj = order_tickets_obj.browse(self.kitchen_id)
             kot_obj.write(line_data)
             for order_line in order.order_list:
